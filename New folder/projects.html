@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Axiom Global Engineering</title>
+  <meta name="description" content="Browse Axiom's global portfolio of landmark infrastructure, energy, renewables, nuclear, mining and defense projects across 33+ countries.">
+  <meta property="og:title" content="Projects — Axiom Global Engineering">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+<!-- Search Overlay -->
+<div id="search-overlay" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="search-overlay__box">
+    <form class="search-overlay__form" action="#" role="search">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="search" placeholder="Search projects…" aria-label="Search" autocomplete="off">
+      <button id="search-close" class="search-overlay__close" type="button" aria-label="Close search">✕</button>
+    </form>
+    <div class="search-overlay__hints">
+      <span class="search-hint">Energy</span><span class="search-hint">Infrastructure</span>
+      <span class="search-hint">Middle East</span><span class="search-hint">Renewables</span>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation (shared) -->
+<nav id="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Axiom Global Engineering home">
+      <div class="nav__logo-mark" aria-hidden="true">AG</div>
+      <div class="nav__logo-text">
+        <span class="nav__logo-name">Axiom</span>
+        <span class="nav__logo-tagline">Global Engineering</span>
+      </div>
+    </a>
+    <ul class="nav__menu" role="list">
+      <li class="nav__item"><a href="people.html" class="nav__link">People</a></li>
+      <li class="nav__item"><a href="projects.html" class="nav__link" style="color: var(--color-accent);">Projects</a></li>
+      <li class="nav__item"><a href="approach.html" class="nav__link">Approach</a></li>
+      <li class="nav__item"><a href="careers.html" class="nav__link">Careers</a></li>
+    </ul>
+    <div class="nav__right">
+      <button class="nav__search-btn" data-search-open aria-label="Open search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></button>
+      <a href="careers.html" class="nav__cta">Join Us</a>
+      <button class="nav__hamburger" aria-label="Toggle mobile menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav__mobile" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <ul>
+      <li class="nav__mobile-item"><a href="people.html" class="nav__mobile-link">People</a></li>
+      <li class="nav__mobile-item"><a href="projects.html" class="nav__mobile-link">Projects</a></li>
+      <li class="nav__mobile-item"><a href="approach.html" class="nav__mobile-link">Approach</a></li>
+      <li class="nav__mobile-item"><a href="careers.html" class="nav__mobile-link">Careers</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+
+  <!-- Page Hero -->
+  <header class="page-hero" style="padding-top: calc(var(--nav-height) + 4rem);">
+    <div class="page-hero__bg" aria-hidden="true">
+      <img src="C:/Users/pawan/.gemini/antigravity-ide/brain/916214b1-51e3-43e8-8f29-0d658c4101fc/hero_bg_1789401511745.jpg" alt="" loading="eager">
+    </div>
+    <div class="container">
+      <div class="page-hero__content">
+        <nav aria-label="Breadcrumb" class="page-hero__breadcrumb">
+          <a href="index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Projects</span>
+        </nav>
+        <div class="label label--light">Our Portfolio</div>
+        <h1 class="page-hero__headline">Projects That<br>Define an Era</h1>
+        <p class="page-hero__subtext">From Arctic tundra to desert sands — 2,600+ landmark projects across 8 markets and 33+ countries.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter Bar -->
+  <div class="projects-filter-section" id="filter-bar">
+    <div class="container">
+      <div class="filter-bar" role="search" aria-label="Project filters">
+        <div class="filter-group" role="group" aria-label="Filter by market">
+          <span class="filter-label" id="market-label">Market:</span>
+          <div class="filter-chips" role="radiogroup" aria-labelledby="market-label">
+            <button class="filter-chip active" data-filter-type="market" data-filter-value="all" aria-pressed="true">All</button>
+            <button class="filter-chip" data-filter-type="market" data-filter-value="energy" aria-pressed="false">⚡ Energy</button>
+            <button class="filter-chip" data-filter-type="market" data-filter-value="infrastructure" aria-pressed="false">🏗️ Infrastructure</button>
+            <button class="filter-chip" data-filter-type="market" data-filter-value="renewables" aria-pressed="false">🌿 Renewables</button>
+            <button class="filter-chip" data-filter-type="market" data-filter-value="nuclear" aria-pressed="false">☢️ Nuclear</button>
+            <button class="filter-chip" data-filter-type="market" data-filter-value="mining" aria-pressed="false">⛏️ Mining</button>
+            <button class="filter-chip" data-filter-type="market" data-filter-value="defense" aria-pressed="false">🛡️ Defense</button>
+            <button class="filter-chip" data-filter-type="market" data-filter-value="environmental" aria-pressed="false">♻️ Environmental</button>
+          </div>
+        </div>
+        <div class="filter-divider" aria-hidden="true"></div>
+        <div class="filter-group" role="group" aria-label="Filter by region">
+          <span class="filter-label" id="region-label">Region:</span>
+          <div class="filter-chips" role="radiogroup" aria-labelledby="region-label">
+            <button class="filter-chip active-accent" data-filter-type="region" data-filter-value="all" aria-pressed="true">All</button>
+            <button class="filter-chip" data-filter-type="region" data-filter-value="us" aria-pressed="false">🇺🇸 USA</button>
+            <button class="filter-chip" data-filter-type="region" data-filter-value="uk" aria-pressed="false">🇬🇧 UK</button>
+            <button class="filter-chip" data-filter-type="region" data-filter-value="middle-east" aria-pressed="false">🌍 Middle East</button>
+            <button class="filter-chip" data-filter-type="region" data-filter-value="australia" aria-pressed="false">🇦🇺 Australia</button>
+            <button class="filter-chip" data-filter-type="region" data-filter-value="canada" aria-pressed="false">🇨🇦 Canada</button>
+            <button class="filter-chip" data-filter-type="region" data-filter-value="europe" aria-pressed="false">🌍 Europe</button>
+          </div>
+        </div>
+        <div class="filter-count" id="project-count" aria-live="polite" aria-atomic="true">16 projects</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Grid -->
+  <section class="projects-grid-section" aria-labelledby="grid-title">
+    <div class="container">
+      <h2 class="sr-only" id="grid-title">Project listings</h2>
+      <div class="grid-3" id="projects-grid">
+
+        <article class="project-card fade-in" data-market="infrastructure" data-region="canada">
+          <div class="project-card__img">
+            <img src="C:/Users/pawan/.gemini/antigravity-ide/brain/916214b1-51e3-43e8-8f29-0d658c4101fc/hero_bg_1789401511745.jpg" alt="Bridge construction" loading="lazy">
+            <div class="project-card__badges">
+              <span class="tag tag--blue">Infrastructure</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 British Columbia, Canada</div>
+            <h3 class="project-card__title">Pacific Gateway Bridge Replacement</h3>
+            <p class="project-card__desc">3.4km cable-stayed crossing delivering vital connection for 2.4M residents. Six months ahead of schedule.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-1" data-market="energy" data-region="middle-east">
+          <div class="project-card__img">
+            <img src="C:/Users/pawan/.gemini/antigravity-ide/brain/916214b1-51e3-43e8-8f29-0d658c4101fc/project_energy_1789401542447.jpg" alt="LNG Terminal" loading="lazy">
+            <div class="project-card__badges">
+              <span class="tag tag--accent">Energy</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Ras Al Khaimah, UAE</div>
+            <h3 class="project-card__title">Emirates LNG Export Terminal</h3>
+            <p class="project-card__desc">$8.4B world-scale liquefaction facility delivering 18 MTPA capacity in extreme desert conditions.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-2" data-market="renewables" data-region="uk">
+          <div class="project-card__img">
+            <img src="C:/Users/pawan/.gemini/antigravity-ide/brain/916214b1-51e3-43e8-8f29-0d658c4101fc/project_renewables_1789401746261.jpg" alt="Offshore wind farm" loading="lazy">
+            <div class="project-card__badges">
+              <span class="tag" style="background:rgba(52,199,89,0.15);color:#2ecc71;">Renewables</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 North Sea, UK</div>
+            <h3 class="project-card__title">Horizon Wind 2.4GW Offshore Array</h3>
+            <p class="project-card__desc">Europe's largest offshore wind project — 320 turbines powering 2.1 million British homes.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-market="nuclear" data-region="canada">
+          <div class="project-card__img">
+            <img src="C:/Users/pawan/.gemini/antigravity-ide/brain/916214b1-51e3-43e8-8f29-0d658c4101fc/project_nuclear_1789401663023.jpg" alt="Nuclear power plant" loading="lazy">
+            <div class="project-card__badges">
+              <span class="tag">Nuclear</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Ontario, Canada</div>
+            <h3 class="project-card__title">Laurentian SMR — Unit 1 &amp; 2</h3>
+            <p class="project-card__desc">Canada's first commercial Small Modular Reactor programme delivering 600MW zero-carbon power.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-1" data-market="infrastructure" data-region="us">
+          <div class="project-card__img">
+            <img src="C:/Users/pawan/.gemini/antigravity-ide/brain/916214b1-51e3-43e8-8f29-0d658c4101fc/project_infrastructure_1789401692610.jpg" alt="Highway interchange" loading="lazy">
+            <div class="project-card__badges">
+              <span class="tag tag--blue">Infrastructure</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Houston, Texas, USA</div>
+            <h3 class="project-card__title">I-69 Interchange Reconstruction</h3>
+            <p class="project-card__desc">Nation's busiest freight corridor upgrade — zero lost freight days during live-traffic construction.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-2" data-market="mining" data-region="europe">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #1a1a3e, #4a2080);">⛏️</div>
+            <div class="project-card__badges">
+              <span class="tag">Mining</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Atacama, Chile</div>
+            <h3 class="project-card__title">Cerro Azul Copper Concentrator</h3>
+            <p class="project-card__desc">180,000 tonne/day copper processing at 4,200m altitude with extreme seismic design.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-market="energy" data-region="australia">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);">🌊</div>
+            <div class="project-card__badges">
+              <span class="tag tag--accent">Energy</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Perth, Australia</div>
+            <h3 class="project-card__title">Ningaloo FLNG Platform</h3>
+            <p class="project-card__desc">World's second-largest floating LNG vessel — 450m hull, 3.8 MTPA capacity, 120km offshore.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-1" data-market="renewables" data-region="middle-east">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #1c3f1c, #2d6e2d);">🌿</div>
+            <div class="project-card__badges">
+              <span class="tag" style="background:rgba(52,199,89,0.15);color:#2ecc71;">Renewables</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Neom, Saudi Arabia</div>
+            <h3 class="project-card__title">Desert Green Hydrogen Gigaplant</h3>
+            <p class="project-card__desc">Earth's largest electrolysis installation — 4GW solar powered, 600 tonne/day H₂ production.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-2" data-market="environmental" data-region="us">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #2e0854, #5c1a8c);">🔬</div>
+            <div class="project-card__badges">
+              <span class="tag">Environmental</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Hanford, Washington, USA</div>
+            <h3 class="project-card__title">Hanford Waste Treatment Plant</h3>
+            <p class="project-card__desc">America's largest nuclear remediation — treating 56M gallons of radioactive waste via vitrification.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-market="defense" data-region="us">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #1a2020, #2a4040, #3a5050);">🛡️</div>
+            <div class="project-card__badges">
+              <span class="tag">Defense</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 New Mexico, USA</div>
+            <h3 class="project-card__title">Kirtland AFB ICBM Maintenance Complex</h3>
+            <p class="project-card__desc">Classified-clearance facilities upgrade covering 2.4M sq ft of hardened infrastructure for nuclear deterrent systems.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-1" data-market="infrastructure" data-region="uk">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #1e1e1e, #3a3a3a, #5a5a7a);">🚇</div>
+            <div class="project-card__badges">
+              <span class="tag tag--blue">Infrastructure</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 London, UK</div>
+            <h3 class="project-card__title">Crossrail — Central Tunnelling Package</h3>
+            <p class="project-card__desc">26km twin-bore tunnels under Central London with millimetre precision and zero Tube disruptions.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-2" data-market="energy" data-region="middle-east">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #3d2b1f, #c8860a);">🏜️</div>
+            <div class="project-card__badges">
+              <span class="tag tag--accent">Energy</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Jubail, Saudi Arabia</div>
+            <h3 class="project-card__title">Jubail Refinery Complex — Phase III</h3>
+            <p class="project-card__desc">600,000 BPD integrated refinery and petrochemical complex — the largest single refinery investment in history.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-market="nuclear" data-region="uk">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #0a1628, #1a3a6b);">☢️</div>
+            <div class="project-card__badges">
+              <span class="tag">Nuclear</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Sellafield, UK</div>
+            <h3 class="project-card__title">Sellafield Decommissioning Programme</h3>
+            <p class="project-card__desc">30-year decommissioning programme for the UK's largest nuclear site — safe, methodical, and generationally significant.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-1" data-market="renewables" data-region="us">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #1a3a1a, #2a6b2a, #3a9e3a);">☀️</div>
+            <div class="project-card__badges">
+              <span class="tag" style="background:rgba(52,199,89,0.15);color:#2ecc71;">Renewables</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Mojave Desert, California, USA</div>
+            <h3 class="project-card__title">Sunrise Solar Thermal Array — 800MW</h3>
+            <p class="project-card__desc">Concentrating solar power with 10-hour molten salt storage — dispatchable clean energy for 600,000 California homes.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in fade-in-delay-2" data-market="mining" data-region="australia">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #5c3000, #a85800, #e07000);">⛏️</div>
+            <div class="project-card__badges">
+              <span class="tag">Mining</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Pilbara, Australia</div>
+            <h3 class="project-card__title">Roy Hill Iron Ore Expansion</h3>
+            <p class="project-card__desc">60 MTPA iron ore processing plant expansion with 344km railway and port capacity upgrade.</p>
+          </div>
+        </article>
+
+        <article class="project-card fade-in" data-market="infrastructure" data-region="europe">
+          <div class="project-card__img">
+            <div class="project-card__img-placeholder" style="background: linear-gradient(135deg, #1a1a40, #2a2a6b);">🚄</div>
+            <div class="project-card__badges">
+              <span class="tag tag--blue">Infrastructure</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__location">📍 Lyon–Turin, France/Italy</div>
+            <h3 class="project-card__title">Mont Cenis Base Tunnel — Alpine Section</h3>
+            <p class="project-card__desc">57km rail tunnel through the Alps — Europe's longest base tunnel, connecting Lyon to Turin in under 2 hours.</p>
+          </div>
+        </article>
+
+        <!-- No results message (hidden by default) -->
+        <div class="no-results" style="display:none;">
+          <h3>No projects match your filters</h3>
+          <p>Try adjusting the market or region selection above.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <div class="cta-banner">
+    <div class="container">
+      <div class="label fade-in" style="justify-content: center; color: rgba(255,255,255,0.5);">Work With Us</div>
+      <h2 class="cta-banner__headline fade-in fade-in-delay-1">Have a Challenging Project?</h2>
+      <p class="cta-banner__sub fade-in fade-in-delay-2">Bring us your most complex brief. We live for the challenge.</p>
+      <div class="cta-banner__actions fade-in fade-in-delay-3">
+        <a href="#" class="btn btn-primary">Start a Conversation</a>
+        <a href="approach.html" class="btn btn-outline">Our Approach</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer id="site-footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-bottom__copy">© 2026 Axiom Global Engineering Corporation. All rights reserved.</p>
+      <nav aria-label="Legal links">
+        <ul class="footer-bottom__links">
+          <li><a href="#" class="footer-bottom__link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-bottom__link">Terms of Use</a></li>
+          <li><a href="#" class="footer-bottom__link">Ethics Hotline</a></li>
+          <li><a href="#" class="footer-bottom__link">Cookie Settings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="hidden" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__text">
+      <h3>We value your privacy</h3>
+      <p>We use cookies to enhance your experience. Read our <a href="#">Privacy Policy</a>.</p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button id="cookie-essential-only" class="btn btn-outline" type="button">Essential Only</button>
+      <button id="cookie-accept-all" class="btn btn-primary" type="button">Accept All</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/nav.js" defer></script>
+<script src="js/scroll-animations.js" defer></script>
+<script src="js/projects-filter.js" defer></script>
+<script src="js/cookie-banner.js" defer></script>
+<script src="js/search.js" defer></script>
+</body>
+</html>
